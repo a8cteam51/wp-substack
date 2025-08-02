@@ -2,13 +2,13 @@
 /**
  * Plugin Name:     WordPress to Substack publishing
  * Plugin URI:      https://github.com/a8cteam51/wp-substack
- * Update URI:      https://github.com/a8cteam51/wp-substack
+ * Update URI:      https://github.com/a8cteam51/wp-substack/
  * Description:     Publish WordPress posts to Substack
  * Author:          WordPress.com Special Projects Team
  * Author URI:      https://wordpress.com
  * Text Domain:     a8csp-wp-substack
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.0.1
  *
  * @package         wp-substack
  */
