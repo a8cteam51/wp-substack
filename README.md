@@ -1,7 +1,3 @@
-⚠️ Archived Repository
-This repository is no longer maintained and has been archived.
-Please visit the actively maintained version here: [WordPress to Substack Plugin](https://github.com/a8cteam51/wp-substack)
-
 # WordPress to Substack Plugin
 
 ## Overview
