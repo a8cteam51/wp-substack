@@ -2,10 +2,10 @@
 /**
  * Settings page functionality
  *
- * @package WPSubstack
+ * @package A8CSPWPSubstack
  */
 
-namespace WPSubstack;
+namespace A8CSPWPSubstack;
 
 /**
  * Class Settings_Page
@@ -29,10 +29,10 @@ class Settings_Page {
 	 */
 	public function add_settings_page() {
 		add_options_page(
-			__( 'WP <-> Substack Settings', 'wp-substack' ),
-			__( 'WP <-> Substack Settings', 'wp-substack' ),
+			__( 'WP <-> Substack Settings', 'a8csp-wp-substack' ),
+			__( 'WP <-> Substack Settings', 'a8csp-wp-substack' ),
 			'manage_options',
-			'wp_substack-settings',
+			'a8csp_wp_substack-settings',
 			array( $this, 'render_settings_page' )
 		);
 	}
@@ -48,25 +48,25 @@ class Settings_Page {
 			Plugin::OPTION_NAME_PUBLICATIONS,
 			array(
 				'type'              => 'string',
-				'description'       => __( 'Substack publications', 'wp-substack' ),
+				'description'       => __( 'Substack publications', 'a8csp-wp-substack' ),
 				'sanitize_callback' => 'sanitize_textarea_field',
 				'show_in_rest'      => true,
 			)
 		);
 
 		add_settings_section(
-			'wp_substack_main_section',
-			__( 'Substack Publications', 'wp-substack' ),
+			'a8csp_wp_substack_main_section',
+			__( 'Substack Publications', 'a8csp-wp-substack' ),
 			array( $this, 'render_section_description' ),
-			'wp_substack'
+			'a8csp_wp_substack'
 		);
 
 		add_settings_field(
 			'substack_publications_field',
-			__( 'Your Substack Publications', 'wp-substack' ),
+			__( 'Your Substack Publications', 'a8csp-wp-substack' ),
 			array( $this, 'render_publications_field' ),
-			'wp_substack',
-			'wp_substack_main_section'
+			'a8csp_wp_substack',
+			'a8csp_wp_substack_main_section'
 		);
 	}
 
@@ -85,7 +85,7 @@ class Settings_Page {
 			<form method="post" action="options.php">
 				<?php
 				settings_fields( Plugin::OPTION_GROUP );
-				do_settings_sections( 'wp_substack' );
+				do_settings_sections( 'a8csp_wp_substack' );
 				submit_button();
 				?>
 			</form>
@@ -99,7 +99,7 @@ class Settings_Page {
 	 * @return void
 	 */
 	public function render_section_description() {
-		echo '<p>' . esc_html__( 'Enter the URLs of your Substack publications, one per line:', 'wp-substack' ) . '</p>';
+		echo '<p>' . esc_html__( 'Enter the URLs of your Substack publications, one per line:', 'a8csp-wp-substack' ) . '</p>';
 	}
 
 	/**

@@ -1,6 +1,6 @@
 {
-  "name": "wp-substack",
-  "version": "0.1.0",
+  "name": "a8csp-wp-substack",
+  "version": "0.1.1",
   "main": "Gruntfile.js",
   "author": "WordPress.com Special Projects Team",
   "scripts": {

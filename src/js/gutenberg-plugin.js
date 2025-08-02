@@ -803,9 +803,9 @@ const MySidebar = ({ postTitle, postBlocks, featuredImageUrl, postExcerpt }) => 
     };
 
     return (
-        <PluginDocumentSettingPanel className="publish_to_substack" title={__('Publish to Substack', 'text-domain')}>
+        <PluginDocumentSettingPanel className="publish_to_substack" title={__('Publish to Substack', 'a8csp-wp-substack')}>
             <SelectControl
-                label={__('Select Substack Publication', 'text-domain')}
+                label={__('Select Substack Publication', 'a8csp-wp-substack')}
                 value={selectedPublication}
                 options={publications}
                 onChange={(value) => setSelectedPublication(value)}
@@ -817,11 +817,11 @@ const MySidebar = ({ postTitle, postBlocks, featuredImageUrl, postExcerpt }) => 
                         checked={debugMode}
                         onChange={() => setDebugMode(!debugMode)}
                     />
-                    {__('Open in debug mode', 'text-domain')}
+                    {__('Open in debug mode', 'a8csp-wp-substack')}
                 </label>
             </div>
             <Button isPrimary onClick={handleClick}>
-                {__('Send to Substack', 'text-domain')}
+                {__('Send to Substack', 'a8csp-wp-substack')}
             </Button>
         </PluginDocumentSettingPanel>
     );
@@ -850,6 +850,6 @@ const MySidebarWithData = withSelect((select) => {
     };
 })(MySidebar);
 
-registerPlugin('my-gutenberg-plugin', {
+registerPlugin('a8csp-wp-substack', {
     render: MySidebarWithData,
 });

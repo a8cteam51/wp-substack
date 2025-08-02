@@ -2,10 +2,10 @@
 /**
  * Block editor functionality
  *
- * @package WPSubstack
+ * @package A8CSPWPSubstack
  */
 
-namespace WPSubstack;
+namespace A8CSPWPSubstack;
 
 /**
  * Class Block_Editor
@@ -27,17 +27,17 @@ class Block_Editor {
 	 * @return void
 	 */
 	public function enqueue_assets() {
-		$asset_file = WP_SUBSTACK_PLUGIN_DIR . 'build/js/gutenberg-plugin.asset.php';
+		$asset_file = A8CSP_WP_SUBSTACK_DIR_PATH . 'build/js/gutenberg-plugin.asset.php';
 		$asset_data = file_exists( $asset_file )
 			? require $asset_file
 			: array(
 				'dependencies' => array( 'wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data' ),
-				'version'      => WP_SUBSTACK_VERSION,
+				'version'      => A8CSP_WP_SUBSTACK_VERSION,
 			);
 
 		wp_register_script(
 			'wp-substack-gutenberg',
-			WP_SUBSTACK_PLUGIN_URL . 'build/js/gutenberg-plugin.js',
+			A8CSP_WP_SUBSTACK_DIR_URL . 'build/js/gutenberg-plugin.js',
 			$asset_data['dependencies'],
 			$asset_data['version'],
 			true
