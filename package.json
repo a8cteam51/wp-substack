@@ -1,0 +1,17 @@
+{
+  "name": "wp-substack",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "author": "WordPress.com Special Projects Team",
+  "scripts": {
+    "start": "npm-run-all --parallel start:**",
+    "build": "npm-run-all --sequential build:**",
+    "start:assets:scripts": "wp-scripts start src/js/*.js --output-path=build/js",
+    "build:assets:scripts": "wp-scripts build src/js/*.js --output-path=build/js"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.0.0",
+    "npm-run-all": "^4.1.5",
+    "querystring": "^0.2.1"
+  }
+}
