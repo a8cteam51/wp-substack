@@ -8,7 +8,7 @@
  * Author URI:      https://wordpress.com
  * Text Domain:     a8csp-wp-substack
  * Domain Path:     /languages
- * Version:         0.0.1
+ * Version:         0.1.1
  *
  * @package         wp-substack
  */
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants.
-define( 'A8CSP_WP_SUBSTACK_VERSION', '0.1.0' );
+define( 'A8CSP_WP_SUBSTACK_VERSION', '0.1.1' );
 define( 'A8CSP_WP_SUBSTACK_BASENAME', plugin_basename( __FILE__ ) );
 define( 'A8CSP_WP_SUBSTACK_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'A8CSP_WP_SUBSTACK_DIR_URL', plugin_dir_url( __FILE__ ) );
@@ -48,6 +48,9 @@ add_action(
 		$latest_release_info    = json_decode( wp_remote_retrieve_body( $latest_release_info ), true );
 		$latest_release_version = ltrim( $latest_release_info['tag_name'], 'v' );
 		if ( version_compare( $plugin_data['Version'], $latest_release_version, '<' ) ) {
+			if ( empty( $latest_release_info['assets'] ) ) {
+				return $update;
+			}
 			$update = array(
 				'slug'    => $plugin_data['TextDomain'],
 				'version' => $latest_release_version,

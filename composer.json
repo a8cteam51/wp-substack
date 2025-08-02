@@ -3,7 +3,7 @@
 	"type": "wordpress-plugin",
   
 	"description": "",
-	"homepage": "https://github.com/a8cteam51/twp-substack",
+	"homepage": "https://github.com/a8cteam51/wp-substack",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 	  {
@@ -47,7 +47,7 @@
   
 	"autoload": {
 	  "psr-4": {
-		"WPSubstack\\": "includes/"
+		"A8CSPWPSubstack\\": "includes/"
 	  }
 	},
 	"autoload-dev": {
