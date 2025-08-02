@@ -10,7 +10,7 @@
  * Domain Path:     /languages
  * Version:         0.1.1
  *
- * @package         wp-substack
+ * @package         a8csp-wp-substack
  */
 
 namespace A8CSPWPSubstack;
