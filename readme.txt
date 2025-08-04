@@ -4,7 +4,7 @@ Tags: substack, newsletter, publishing, cross-posting, content-syndication
 Requires at least: 5.0
 Tested up to: 6.8.1
 Requires PHP: 7.2
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ If you encounter issues:
 4. Verify your publications are properly entered into the plugin settings (Example: `https://mypublicationname.substack.com`)
 
 == Changelog ==
+= 0.1.1 =
+* Add plugin update functionality
+* Normalized namespace and text domain
 
 = 0.1.0 =
 * Initial release

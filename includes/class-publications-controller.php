@@ -2,10 +2,10 @@
 /**
  * Publications controller functionality
  *
- * @package WPSubstack
+ * @package A8CSPWPSubstack
  */
 
-namespace WPSubstack;
+namespace A8CSPWPSubstack;
 
 use WP_REST_Response;
 

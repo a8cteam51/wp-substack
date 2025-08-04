@@ -5,14 +5,14 @@
  * This class serves as the main plugin container and holds shared configuration
  * like option names and groups used across the plugin.
  *
- * @package WPSubstack
+ * @package A8CSPWPSubstack
  */
 
-namespace WPSubstack;
+namespace A8CSPWPSubstack;
 
-use WPSubstack\Settings_Page;
-use WPSubstack\Block_Editor;
-use WPSubstack\Publications_Controller;
+use A8CSPWPSubstack\Settings_Page;
+use A8CSPWPSubstack\Block_Editor;
+use A8CSPWPSubstack\Publications_Controller;
 
 /**
  * Main plugin class
@@ -30,14 +30,14 @@ class Plugin {
 	 *
 	 * @var string
 	 */
-	public const OPTION_NAME_PUBLICATIONS = 'wp_substack_substack_publications';
+	public const OPTION_NAME_PUBLICATIONS = 'a8csp_wp_substack_substack_publications';
 
 	/**
 	 * Option group name for settings.
 	 *
 	 * @var string
 	 */
-	public const OPTION_GROUP = 'wp_substack_options_group';
+	public const OPTION_GROUP = 'a8csp_wp_substack_options_group';
 
 	/**
 	 * Settings page instance.
